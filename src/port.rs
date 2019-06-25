@@ -33,9 +33,9 @@ extern "C" {
     pub fn gp_port_info_set_type(info: GPPortInfo, port_type: GPPortType) -> c_int;
     pub fn gp_port_info_get_library_filename(info: GPPortInfo, lib: *mut *const c_char) -> c_int;
     pub fn gp_port_info_set_library_filename(info: GPPortInfo, liv: *const c_char) -> c_int;
-    pub fn gp_port_info_list_new(list: *mut *const GPPortInfoList) -> c_int;
-    pub fn gp_port_info_list_free(list: *const GPPortInfoList) -> c_int;
-    pub fn gp_port_info_list_append(list: *const GPPortInfoList, info: GPPortInfo) -> c_int;
+    pub fn gp_port_info_list_new(list: *mut *mut GPPortInfoList) -> c_int;
+    pub fn gp_port_info_list_free(list: *mut GPPortInfoList) -> c_int;
+    pub fn gp_port_info_list_append(list: *mut GPPortInfoList, info: GPPortInfo) -> c_int;
     pub fn gp_port_info_list_load(list: *mut GPPortInfoList) -> c_int;
     pub fn gp_port_info_list_count(list: *const GPPortInfoList) -> c_int;
     pub fn gp_port_info_list_lookup_path(list: *const GPPortInfoList, path: *const c_char) -> c_int;
